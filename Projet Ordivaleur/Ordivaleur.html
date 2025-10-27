@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordivaleur - Recommandation de Configurations PC en Tunisie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2980b9;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+            --success: #2ecc71;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .intro p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-col {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .budget-input {
+            position: relative;
+        }
+
+        .budget-input span {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .budget-input input {
+            padding-left: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        .btn-accent {
+            background: var(--accent);
+        }
+
+        .btn-accent:hover {
+            background: #c0392b;
+        }
+
+        .results-container {
+            display: none;
+            margin-top: 2rem;
+        }
+
+        .results-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            text-align: center;
+        }
+
+        .config-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .config-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .config-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #f5f7fa;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        .specs-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .specs-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-name {
+            color: var(--gray);
+        }
+
+        .spec-value {
+            font-weight: 600;
+        }
+
+        .card-footer {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(52, 152, 219, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray);
+            display: none;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .form-col {
+                min-width: 100%;
+            }
+
+            .config-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 5px;
+            cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Ordivaleur</div>
+            <div class="tagline">Trouvez la configuration PC parfaite pour votre budget en Tunisie</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>Configurateur PC Intelligent</h2>
+                <p>Remplissez le formulaire ci-dessous avec votre budget et vos besoins pour obtenir des recommandations de configurations PC optimisées, basées sur les prix actuels des composants en Tunisie.</p>
+            </section>
+
+            <section class="form-container">
+                <h3 class="form-title">Vos besoins informatiques</h3>
+                <form id="configForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="budget">Budget (DT)</label>
+                                <div class="budget-input">
+                                    <span>DT</span>
+                                    <input type="number" id="budget" min="500" max="10000" step="50" placeholder="Ex: 2500" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="usage">Usage principal</label>
+                                <select id="usage" required>
+                                    <option value="" disabled selected>Sélectionnez un usage</option>
+                                    <option value="bureautique">Bureautique (Traitement de texte, navigation web)</option>
+                                    <option value="multimedia">Multimédia (Streaming, montage vidéo simple)</option>
+                                    <option value="graphisme">Graphisme & Design (Photoshop, Illustrator, etc.)</option>
+                                    <option value="gaming">Gaming (Jeux vidéo)</option>
+                                    <option value="montage">Montage vidéo professionnel (4K, After Effects)</option>
+                                    <option value="3d">Modélisation 3D & Rendu (Blender, Maya, etc.)</option>
+                                    <option value="programmation">Programmation & Développement</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="type">Type de configuration</label>
+                                <select id="type" required>
+                                    <option value="" disabled selected>Sélectionnez un type</option>
+                                    <option value="desktop">PC Bureau</option>
+                                    <option value="laptop">PC Portable</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Priorité</label>
+                                <select id="priority">
+                                    <option value="balanced" selected>Équilibré</option>
+                                    <option value="performance">Performance maximale</option>
+                                    <option value="upgradability">Évolutivité future</option>
+                                    <option value="design">Design compact/silencieux</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            Besoins spécifiques
+                            <span class="tooltip">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltiptext">Cochez les cases correspondant à vos besoins particuliers</span>
+                            </span>
+                        </label>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="needWifi"> WiFi intégré
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="needBluetooth"> Bluetooth
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="needRGB"> Éclairage RGB
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="needMonitor"> Écran inclus
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="needKeyboard"> Clavier/Souris inclus
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="needOs"> Système d'exploitation préinstallé
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-block">Trouver ma configuration</button>
+                </form>
+            </section>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Recherche des meilleures configurations pour vous...</p>
+            </div>
+
+            <div class="no-results" id="noResults">
+                <i class="fas fa-exclamation-circle" style="font-size: 3rem; margin-bottom: 1rem; color: var(--gray);"></i>
+                <h3>Aucune configuration trouvée</h3>
+                <p>Nous n'avons pas trouvé de configurations correspondant à vos critères. Essayez d'augmenter votre budget ou de modifier vos besoins.</p>
+                <button class="btn" onclick="document.getElementById('configForm').scrollIntoView()">Modifier mes critères</button>
+            </div>
+
+            <section class="results-container" id="resultsContainer">
+                <h3 class="results-title">Configurations recommandées</h3>
+                <div class="config-cards" id="configCards">
+                    <!-- Configurations will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ordivaleur</div>
+                <div class="footer-links">
+                    <a href="#">Accueil</a>
+                    <a href="#">À propos</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 Ordivaleur. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('configForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading spinner
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('noResults').style.display = 'none';
+            document.getElementById('resultsContainer').style.display = 'none';
+            
+            // Get form values
+            const budget = parseInt(document.getElementById('budget').value);
+            const usage = document.getElementById('usage').value;
+            const type = document.getElementById('type').value;
+            const priority = document.getElementById('priority').value;
+            const needs = {
+                wifi: document.getElementById('needWifi').checked,
+                bluetooth: document.getElementById('needBluetooth').checked,
+                rgb: document.getElementById('needRGB').checked,
+                monitor: document.getElementById('needMonitor').checked,
+                keyboard: document.getElementById('needKeyboard').checked,
+                os: document.getElementById('needOs').checked
+            };
+            
+            // Simulate API call with timeout (in a real app, you would fetch from your backend)
+            setTimeout(() => {
+                // Hide loading spinner
+                document.getElementById('loading').style.display = 'none';
+                
+                // Generate mock data based on user input
+                const configs = generateMockConfigs(budget, usage, type, priority, needs);
+                
+                if (configs.length > 0) {
+                    displayResults(configs);
+                } else {
+                    document.getElementById('noResults').style.display = 'block';
+                }
+            }, 1500);
+        });
+        
+        function generateMockConfigs(budget, usage, type, priority, needs) {
+            // This is mock data - in a real app, you would get this from your backend
+            // which would scrape e-commerce sites and generate optimal configurations
+            
+            const configs = [];
+            const budgetRange = budget * 0.1; // ±10% of budget
+            
+            // Determine components based on usage
+            let cpu, gpu, ram, storage;
+            
+            switch(usage) {
+                case 'bureautique':
+                    cpu = ['Intel Core i3-12100', 'AMD Ryzen 3 4100'];
+                    gpu = ['Intégré', 'Intégré'];
+                    ram = ['8GB', '8GB'];
+                    storage = ['256GB SSD', '512GB SSD'];
+                    break;
+                case 'multimedia':
+                    cpu = ['Intel Core i5-12400', 'AMD Ryzen 5 5600G'];
+                    gpu = ['Intégré', 'Intégré'];
+                    ram = ['16GB', '16GB'];
+                    storage = ['512GB SSD', '1TB SSD'];
+                    break;
+                case 'graphisme':
+                    cpu = ['Intel Core i7-12700', 'AMD Ryzen 7 5700X'];
+                    gpu = ['NVIDIA RTX 3060', 'AMD RX 6700 XT'];
+                    ram = ['32GB', '32GB'];
+                    storage = ['1TB SSD + 2TB HDD', '1TB NVMe SSD'];
+                    break;
+                case 'gaming':
+                    cpu = ['Intel Core i5-12600K', 'AMD Ryzen 5 7600X'];
+                    gpu = ['NVIDIA RTX 3060 Ti', 'AMD RX 6700 XT'];
+                    ram = ['16GB DDR4 3200MHz', '32GB DDR4 3600MHz'];
+                    storage = ['1TB NVMe SSD', '1TB NVMe SSD + 2TB HDD'];
+                    break;
+                case 'montage':
+                    cpu = ['Intel Core i7-13700K', 'AMD Ryzen 9 5900X'];
+                    gpu = ['NVIDIA RTX 3070 Ti', 'NVIDIA RTX 3080'];
+                    ram = ['32GB DDR4 3600MHz', '64GB DDR4 3600MHz'];
+                    storage = ['2TB NVMe SSD', '1TB NVMe SSD + 4TB HDD'];
+                    break;
+                case '3d':
+                    cpu = ['Intel Core i9-13900K', 'AMD Ryzen 9 7950X'];
+                    gpu = ['NVIDIA RTX 4080', 'NVIDIA RTX 4090'];
+                    ram = ['64GB DDR5', '128GB DDR5'];
+                    storage = ['2TB NVMe SSD', '2TB NVMe SSD + 8TB HDD'];
+                    break;
+                case 'programmation':
+                    cpu = ['Intel Core i7-13700', 'AMD Ryzen 7 7700X'];
+                    gpu = ['NVIDIA RTX 3060', 'Intégré'];
+                    ram = ['32GB DDR5', '32GB DDR4'];
+                    storage = ['1TB NVMe SSD', '512GB NVMe SSD + 1TB SSD'];
+                    break;
+                default:
+                    cpu = ['Intel Core i5-12400', 'AMD Ryzen 5 5600'];
+                    gpu = ['NVIDIA GTX 1660 Super', 'AMD RX 6600'];
+                    ram = ['16GB DDR4', '16GB DDR4'];
+                    storage = ['512GB SSD', '1TB SSD'];
+            }
+            
+            // Adjust for laptop vs desktop
+            if (type === 'laptop') {
+                gpu = gpu.map(g => g === 'Intégré' ? 'Intégré' : g.replace('RTX', 'Mobile RTX').replace('RX', 'Mobile RX'));
+                storage = storage.map(s => s.replace('HDD', 'SSD'));
+            }
+            
+            // Generate 3 mock configurations
+            for (let i = 0; i < 3; i++) {
+                const price = budget + (Math.random() * budgetRange * 2 - budgetRange);
+                const roundedPrice = Math.round(price / 50) * 50;
+                
+                // Ensure we don't go below minimum price
+                const finalPrice = roundedPrice < 800 ? 800 + Math.random() * 200 : roundedPrice;
+                
+                configs.push({
+                    id: i + 1,
+                    name: `Configuration ${type === 'desktop' ? 'Bureau' : 'Portable'} ${['Équilibrée', 'Performance', 'Économique'][i]}`,
+                    price: finalPrice,
+                    type: type,
+                    components: {
+                        cpu: cpu[i % cpu.length],
+                        gpu: gpu[i % gpu.length],
+                        ram: ram[i % ram.length],
+                        storage: storage[i % storage.length],
+                        motherboard: type === 'desktop' ? (usage === 'gaming' ? 'Carte mère Gaming' : 'Carte mère standard') : 'Carte mère portable',
+                        psu: type === 'desktop' ? (usage === 'gaming' ? '650W 80+ Gold' : '550W 80+ Bronze') : 'Batterie intégrée',
+                        case: type === 'desktop' ? (needs.rgb ? 'Boîtier RGB' : 'Boîtier standard') : 'Châssis portable'
+                    },
+                    includes: [
+                        needs.monitor && 'Écran 24" Full HD',
+                        needs.keyboard && 'Clavier + Souris',
+                        needs.os && 'Windows 11 Pro',
+                        needs.wifi && 'WiFi intégré',
+                        needs.bluetooth && 'Bluetooth',
+                        needs.rgb && 'Éclairage RGB'
+                    ].filter(Boolean),
+                    image: type === 'desktop' ? 
+                        `https://source.unsplash.com/random/600x400/?pc,desktop,${i}` : 
+                        `https://source.unsplash.com/random/600x400/?laptop,notebook,${i}`,
+                    links: [
+                        { name: 'Voir sur Tunisianet', url: '#' },
+                        { name: 'Voir sur MyTek', url: '#' },
+                        { name: 'Voir sur Wiki', url: '#' }
+                    ]
+                });
+            }
+            
+            // Sort by closest to budget
+            configs.sort((a, b) => Math.abs(a.price - budget) - Math.abs(b.price - budget));
+            
+            return configs;
+        }
+        
+        function displayResults(configs) {
+            const container = document.getElementById('configCards');
+            container.innerHTML = '';
+            
+            configs.forEach(config => {
+                const card = document.createElement('div');
+                card.className = 'config-card';
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h4 class="card-title">${config.name}</h4>
+                        <div class="card-price">${config.price.toLocaleString()} DT</div>
+                    </div>
+                    <div class="card-body">
+                        <img src="${config.image}" alt="${config.name}" class="card-image">
+                        <ul class="specs-list">
+                            <li>
+                                <span class="spec-name">Processeur</span>
+                                <span class="spec-value">${config.components.cpu}</span>
+                            </li>
+                            <li>
+                                <span class="spec-name">Carte graphique</span>
+                                <span class="spec-value">${config.components.gpu}</span>
+                            </li>
+                            <li>
+                                <span class="spec-name">Mémoire RAM</span>
+                                <span class="spec-value">${config.components.ram}</span>
+                            </li>
+                            <li>
+                                <span class="spec-name">Stockage</span>
+                                <span class="spec-value">${config.components.storage}</span>
+                            </li>
+                            <li>
+                                <span class="spec-name">${config.type === 'desktop' ? 'Carte mère' : 'Châssis'}</span>
+                                <span class="spec-value">${config.components.motherboard}</span>
+                            </li>
+                            <li>
+                                <span class="spec-name">${config.type === 'desktop' ? 'Alimentation' : 'Batterie'}</span>
+                                <span class="spec-value">${config.components.psu}</span>
+                            </li>
+                            ${config.includes.length > 0 ? `
+                            <li>
+                                <span class="spec-name">Inclus</span>
+                                <span class="spec-value">${config.includes.join(', ')}</span>
+                            </li>
+                            ` : ''}
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group">
+                            ${config.links.map(link => 
+                                `<a href="${link.url}" class="btn" target="_blank">${link.name}</a>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+            
+            document.getElementById('resultsContainer').style.display = 'block';
+            document.getElementById('resultsContainer').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
