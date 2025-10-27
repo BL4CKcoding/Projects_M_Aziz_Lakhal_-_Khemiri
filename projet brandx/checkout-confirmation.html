@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - BrandX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="nav-toggle" aria-label="Toggle Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <a href="index.html" class="brand-logo">BrandX</a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <button class="search-toggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-expand">
+                        <input type="text" class="searchbar" placeholder="Search...">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="signin.html" class="account-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="wishlist-btn" aria-label="Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </button>
+                    <button class="cart-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="confirmation-container">
+            <div class="confirmation-content">
+                <div class="confirmation-header">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h1>Order Confirmed!</h1>
+                    <p>Thank you for your purchase. Your order has been received.</p>
+                </div>
+
+                <div class="order-details">
+                    <div class="order-info">
+                        <div class="info-group">
+                            <h3>Order Number</h3>
+                            <p id="orderNumber">#BRX-2024-001</p>
+                        </div>
+                        <div class="info-group">
+                            <h3>Date</h3>
+                            <p id="orderDate"></p>
+                        </div>
+                        <div class="info-group">
+                            <h3>Total</h3>
+                            <p id="orderTotal">$0.00</p>
+                        </div>
+                        <div class="info-group">
+                            <h3>Payment Method</h3>
+                            <p>Credit Card</p>
+                        </div>
+                    </div>
+
+                    <div class="shipping-info">
+                        <h2>Shipping Information</h2>
+                        <div class="info-grid">
+                            <div class="info-group">
+                                <h3>Shipping Address</h3>
+                                <p id="shippingAddress"></p>
+                            </div>
+                            <div class="info-group">
+                                <h3>Contact Information</h3>
+                                <p id="contactInfo"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="order-items" id="orderItems">
+                            <!-- Order items will be dynamically inserted here -->
+                        </div>
+                        <div class="order-totals">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>TVA (19%)</span>
+                                <span id="tva">$0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping</span>
+                                <span id="shipping">$10.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Fiscal Stamp</span>
+                                <span id="stamp">$1.00</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>Total</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="confirmation-actions">
+                    <a href="collections.html" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i>
+                        Continue Shopping
+                    </a>
+                    <a href="#" class="track-order">
+                        <i class="fas fa-truck"></i>
+                        Track Order
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h2 class="footer-logo">BrandX</h2>
+                    <p>Discover the latest trends in fashion and lifestyle. Shop our curated collection of premium products.</p>
+                    <div class="payment-methods">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196565.png" alt="PayPal">
+                        <img src="https://cdn-icons-png.flaticon.com/512/196/196539.png" alt="Apple Pay">
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, New York, NY 10001</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@brandx.com</p>
+                    </address>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 BrandX. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Set current date
+        document.getElementById('orderDate').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Get order details from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const shippingInfo = JSON.parse(localStorage.getItem('shippingInfo')) || {};
+
+        // Calculate totals
+        const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+        const tva = subtotal * 0.19;
+        const shipping = 10;
+        const stamp = 1;
+        const total = subtotal + tva + shipping + stamp;
+
+        // Update totals display
+        document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+        document.getElementById('tva').textContent = `$${tva.toFixed(2)}`;
+        document.getElementById('shipping').textContent = `$${shipping.toFixed(2)}`;
+        document.getElementById('stamp').textContent = `$${stamp.toFixed(2)}`;
+        document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        document.getElementById('orderTotal').textContent = `$${total.toFixed(2)}`;
+
+        // Update shipping information
+        if (shippingInfo) {
+            document.getElementById('shippingAddress').textContent = 
+                `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state} ${shippingInfo.zipCode}`;
+            document.getElementById('contactInfo').textContent = 
+                `${shippingInfo.fullName} | ${shippingInfo.email} | ${shippingInfo.phone}`;
+        }
+
+        // Render order items
+        const orderItemsContainer = document.getElementById('orderItems');
+        orderItemsContainer.innerHTML = cartItems.map(item => `
+            <div class="order-item">
+                <div class="item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="item-details">
+                    <h3>${item.name}</h3>
+                    <p>Quantity: ${item.quantity}</p>
+                    <p class="item-price">$${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+            </div>
+        `).join('');
+
+        // Clear cart after successful order
+        localStorage.removeItem('cart');
+        localStorage.removeItem('shippingInfo');
+    </script>
+</body>
+</html> 

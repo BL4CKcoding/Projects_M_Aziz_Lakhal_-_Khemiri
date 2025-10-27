@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - BrandX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <a href="index.html" class="logo-link">
+                    <h1 class="brand-logo">BrandX</h1>
+                </a>
+            </div>
+            
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="collections.html">COLLECTIONS</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="search-container">
+                    <button class="search-toggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-expand">
+                        <input type="text" placeholder="Search products..." class="searchbar">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="account-btn" aria-label="Account">
+                        <i class="far fa-user"></i>
+                    </button>
+                    <a href="wishlist.html" class="wishlist-btn" aria-label="Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="cart-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="auth-section">
+            <div class="auth-container">
+                <div class="auth-content">
+                    <h1>Create Account</h1>
+                    <p>Join our community and start shopping</p>
+                    
+                    <form class="auth-form" id="signupForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required placeholder="Create a password">
+                                <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                                <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="terms-checkbox">
+                                <input type="checkbox" name="terms" required>
+                                <span>I agree to the <a href="#" onclick="alert('Terms and Conditions: By creating an account, you agree to our terms and conditions.')">Terms & Conditions</a></span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="auth-button">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </button>
+                    </form>
+                    
+                    <div class="auth-divider">
+                        <span>or sign up with</span>
+                    </div>
+                    
+                    <div class="social-auth">
+                        <button class="social-auth-btn google">
+                            <i class="fab fa-google"></i>
+                            Google
+                        </button>
+                        <button class="social-auth-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            Facebook
+                        </button>
+                    </div>
+                    
+                    <p class="auth-switch">
+                        Already have an account? <a href="signin.html">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3 class="footer-logo">BrandX</h3>
+                    <p>Premium urban fashion for the modern individual. Quality materials, sustainable practices, and timeless designs.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa fa-2x"></i>
+                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                        <i class="fab fa-cc-paypal fa-2x"></i>
+                        <i class="fab fa-cc-apple-pay fa-2x"></i>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#" onclick="alert('Shipping Information: We offer worldwide shipping. Standard delivery takes 3-5 business days.')">Shipping Info</a></li>
+                            <li><a href="#" onclick="alert('Returns Policy: Easy 30-day returns on all unused items.')">Returns Policy</a></li>
+                            <li><a href="#" onclick="alert('Size Guide: Please refer to individual product pages for detailed size information.')">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect With Us</h4>
+                        <ul>
+                            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, New York, NY 10001</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@brandx.com">contact@brandx.com</a></p>
+                    </address>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 BrandX. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#" onclick="alert('Privacy Policy: We respect your privacy and protect your personal information.')">Privacy Policy</a>
+                        <a href="#" onclick="alert('Terms of Service: By using our website, you agree to our terms of service.')">Terms of Service</a>
+                        <a href="#" onclick="alert('Cookie Policy: We use cookies to enhance your browsing experience.')">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html> 

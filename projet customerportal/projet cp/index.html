@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal - Your One-Stop Shopping Destination</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#" class="logo-link">
+                    <img class="cplogo" src="images/cp_logo.png" alt="Customer Portal Logo">
+                </a>
+            </div>     
+
+            <div class="header-middle">
+                <div class="search-container">
+                    <input class="searchbar" type="text" placeholder="Search products...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <button class="right-section-button">
+                    <i class="fas fa-lock"></i>
+                    <span class="button-text">Log in</span>
+                </button>
+                <button class="right-section-button cart-button">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="button-text">Cart</span>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="right-section-button">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="button-text">Contact</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-container">
+            <div class="side-element">
+                <div class="side-name">
+                    <i class="fas fa-box-open side-icon"></i>
+                    <span class="side-text">Products</span>
+                    <i class="fas fa-chevron-down down-icon"></i>
+                </div>
+                <div class="side-content">
+                    <a href="#" class="content-text">Product List</a>
+                </div>
+            </div>
+            
+            <div class="side-element">
+                <div class="side-name">
+                    <i class="fas fa-file-invoice side-icon"></i>
+                    <span class="side-text">Invoice</span>
+                    <i class="fas fa-chevron-down down-icon"></i>
+                </div>
+                <div class="side-content">
+                    <a href="#" class="content-text">Invoice List</a>
+                </div>
+            </div>
+            
+            <div class="side-element">
+                <div class="side-name">
+                    <i class="fas fa-credit-card side-icon"></i>
+                    <span class="side-text">Sales order</span>
+                    <i class="fas fa-chevron-down down-icon"></i>
+                </div>
+                <div class="side-content">
+                    <a href="#" class="content-text">Sales order</a>
+                </div>
+                <div class="side-content">
+                    <a href="#" class="content-text">Sales order lines</a>
+                </div>
+            </div>
+            
+            <div class="side-element">
+                <div class="side-name">
+                    <i class="fas fa-bookmark side-icon"></i>
+                    <span class="side-text">Category</span>
+                    <i class="fas fa-chevron-down down-icon"></i>
+                </div>
+                <div class="side-content">
+                    <a href="#" class="content-text">Category list</a>
+                </div>
+                <div class="side-content">
+                    <a href="#" class="content-text">All products</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Carousel -->
+        <section class="hero-carousel">
+            <div class="carousel-slide active">
+                <div class="slide-background" style="background-image: url('images/wheel_background.png');"></div>
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Premium Car Wheels for Every Ride</h1>
+                        <p class="slide-subtitle">Discover our exclusive collection of high-performance wheels</p>
+                        <div class="slide-images">
+                            <img src="images/wheel1.png" alt="Car wheel" class="product-image">
+                            <img src="images/wheel2.png" alt="Car wheel" class="product-image">
+                        </div>
+                        <a href="#" class="shop-button">Discover now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <div class="slide-background" style="background-image: url('images/bike_background.png');"></div>
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Ride the Trails with Confidence</h1>
+                        <p class="slide-subtitle">Check our top-quality mountain bikes designed for every adventure</p>
+                        <div class="slide-images">
+                            <img src="images/bike_1.png" alt="Mountain bike" class="product-image">
+                            <img src="images/bike_2.png" alt="Mountain bike" class="product-image">
+                        </div>
+                        <a href="#" class="shop-button">Check now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <div class="slide-background" style="background-image: url('images/background_3.png');"></div>
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Elevate Your Gaming Experience</h1>
+                        <p class="slide-subtitle">Browse our range of high-performance game console controllers</p>
+                        <div class="slide-images">
+                            <img src="images/controller_xbox.png" alt="Xbox controller" class="product-image">
+                            <img src="images/controller_ps5.png" alt="PS5 controller" class="product-image">
+                            <img src="images/controller_ps4.png" alt="PS4 controller" class="product-image">
+                        </div>
+                        <a href="#" class="shop-button">Browse now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <div class="slide-background" style="background-image: url('images/background_4.png');"></div>
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Power Up Your System</h1>
+                        <p class="slide-subtitle">Explore our high-performance motherboards for reliable and fast computing</p>
+                        <div class="slide-images">
+                            <img src="images/gigabyte_motherboard.png" alt="Gigabyte motherboard" class="product-image">
+                            <img src="images/msi_motherboard2.png" alt="MSI motherboard" class="product-image">
+                        </div>
+                        <a href="#" class="shop-button">Explore now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-dots"></div>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/hp_pc_1.png" alt="HP VICTUS" class="product-image">
+                    </div>
+                    <h3 class="product-name">HP VICTUS</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$899.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/smsg_tablet1.png" alt="SAMSUNG S9FE PLUS TABLET" class="product-image">
+                    </div>
+                    <h3 class="product-name">SAMSUNG S9FE PLUS TABLET</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$499.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/nikon_cam1.png" alt="NIKON D3500" class="product-image">
+                    </div>
+                    <h3 class="product-name">NIKON D3500</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$599.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/scooter1.png" alt="XIAOMI ELECTRIC SCOOTER" class="product-image">
+                    </div>
+                    <h3 class="product-name">XIAOMI ELECTRIC SCOOTER 4 LITE V2</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$349.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/led_light_1.png" alt="LED LIGHTING STRIP" class="product-image">
+                    </div>
+                    <h3 class="product-name">LED LIGHTING STRIP</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$29.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/msi_screen1.png" alt="MSI GAMING SCREEN" class="product-image">
+                    </div>
+                    <h3 class="product-name">MSI GAMING SCREEN</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$399.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/gaming_chair.png" alt="TRUST GXT 714R RUYA" class="product-image">
+                    </div>
+                    <h3 class="product-name">TRUST GXT 714R RUYA</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$249.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="images/msi_motherboard1.png" alt="MSI MOTHERBOARD" class="product-image">
+                    </div>
+                    <h3 class="product-name">MSI MOTHERBOARD</h3>
+                    <div class="product-actions">
+                        <span class="product-price">$199.99</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="brands-section">
+            <h2 class="section-title">Our Trusted Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-logo">
+                    <img src="images/logo_hp.png" alt="HP Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_huawei.png" alt="Huawei Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_samsung.png" alt="Samsung Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_decathlon.png" alt="Decathlon Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_msi.png" alt="MSI Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_nikon.png" alt="Nikon Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_xiaomi.png" alt="Xiaomi Logo">
+                </div>
+                <div class="brand-logo">
+                    <img src="images/logo_trust.png" alt="Trust Logo">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3 class="footer-title">Customer<span>Portal</span></h3>
+                    <p class="footer-text">Your one-stop destination for all your shopping needs. We offer high-quality products from trusted brands worldwide.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Shopping Street, Retail City</p>
+                        <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@customerportal.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-newsletter">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="footer-text">Subscribe to our newsletter for the latest products and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CustomerPortal. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

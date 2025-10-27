@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BrandX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <a href="index.html" class="logo-link">
+                    <h1 class="brand-logo">BrandX</h1>
+                </a>
+            </div>
+            
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="collections.html">COLLECTIONS</a></li>
+                    <li><a href="about.html" class="active">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="search-container">
+                    <button class="search-toggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-expand">
+                        <input type="text" placeholder="Search products..." class="searchbar">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="signin.html" class="account-btn" aria-label="Account">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a href="wishlist.html" class="wishlist-btn" aria-label="Wishlist">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </a>
+                    <a href="cart.html" class="cart-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="hero-content">
+                <h1>Our Story</h1>
+                <p>Crafting premium fashion since 2010</p>
+            </div>
+        </section>
+
+        <!-- About Content Section -->
+        <section class="about-section section-padding">
+            <div class="container">
+                <!-- Our Story -->
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Our Story" class="rounded-image">
+                    </div>
+                    <div class="about-content">
+                        <h2>Our Journey</h2>
+                        <p>Founded in 2010, BrandX emerged from a simple yet powerful vision: to create premium fashion that combines timeless elegance with contemporary style. What began as a small boutique has grown into a global brand, while maintaining our commitment to quality and craftsmanship.</p>
+                        <p>Our journey has been marked by innovation, sustainability, and a deep understanding of what modern consumers truly value in their fashion choices.</p>
+                    </div>
+                </div>
+
+                <!-- Our Values -->
+                <div class="values-section">
+                    <h2>Our Core Values</h2>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Sustainability</h3>
+                            <p>Committed to eco-friendly practices and sustainable materials in every aspect of our production.</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-gem"></i>
+                            <h3>Quality</h3>
+                            <p>Dedicated to crafting premium pieces that stand the test of time and exceed expectations.</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Innovation</h3>
+                            <p>Constantly pushing boundaries to create unique designs that set new trends.</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Community</h3>
+                            <p>Building meaningful connections with our customers and supporting local communities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div class="team-section">
+                    <h2>Meet Our Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="images/img1.jpg">
+                            <h3>M. Aziz Khmiri</h3>
+                            <p>Creative Director</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/img2.jpg">
+                            <h3>Imen Guidara</h3>
+                            <p>Head of Design</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="images/img3.PNG">
+                            <h3>M. Aziz Lakhal</h3>
+                            <p>Production Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sustainability Section -->
+                <div class="sustainability-section">
+                    <div class="sustainability-content">
+                        <h2>Our Commitment to Sustainability</h2>
+                        <p>At BrandX, we believe in creating fashion that respects both people and planet. Our sustainability initiatives include:</p>
+                        <ul class="sustainability-list">
+                            <li><i class="fas fa-check"></i> Using eco-friendly materials and production methods</li>
+                            <li><i class="fas fa-check"></i> Implementing ethical manufacturing practices</li>
+                            <li><i class="fas fa-check"></i> Reducing our carbon footprint through efficient logistics</li>
+                            <li><i class="fas fa-check"></i> Supporting fair trade and responsible sourcing</li>
+                        </ul>
+                    </div>
+                    <div class="sustainability-image">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" alt="Sustainability" class="rounded-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3 class="footer-logo">BrandX</h3>
+                    <p>Premium urban fashion for the modern individual. Quality materials, sustainable practices, and timeless designs.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa fa-2x"></i>
+                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                        <i class="fab fa-cc-paypal fa-2x"></i>
+                        <i class="fab fa-cc-apple-pay fa-2x"></i>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#" onclick="alert('Shipping Information: We offer worldwide shipping. Standard delivery takes 3-5 business days.')">Shipping Info</a></li>
+                            <li><a href="#" onclick="alert('Returns Policy: Easy 30-day returns on all unused items.')">Returns Policy</a></li>
+                            <li><a href="#" onclick="alert('Size Guide: Please refer to individual product pages for detailed size information.')">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect With Us</h4>
+                        <ul>
+                            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, New York, NY 10001</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@brandx.com">contact@brandx.com</a></p>
+                    </address>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 BrandX. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#" onclick="alert('Privacy Policy: We respect your privacy and protect your personal information.')">Privacy Policy</a>
+                        <a href="#" onclick="alert('Terms of Service: By using our website, you agree to our terms of service.')">Terms of Service</a>
+                        <a href="#" onclick="alert('Cookie Policy: We use cookies to enhance your browsing experience.')">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

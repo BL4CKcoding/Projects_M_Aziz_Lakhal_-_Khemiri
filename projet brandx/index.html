@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandX - Premium Fashion Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <a href="#" class="logo-link">
+                    <h1 class="brand-logo">BrandX</h1>
+                </a>
+            </div>
+            
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="collections.html">COLLECTIONS</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="search-container">
+                    <button class="search-toggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search-expand">
+                        <input type="text" placeholder="Search products..." class="searchbar">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="signin.html" class="account-btn" aria-label="Account">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <button class="wishlist-btn" aria-label="Wishlist" onclick="window.location.href='wishlist.html'">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </button>
+                    <button class="cart-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile search bar -->
+        <div class="mobile-search">
+            <input type="text" placeholder="Search BrandX...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    
+    <!-- Improved mobile sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Shop</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#">All Products</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                    <a href="#">Sale Items</a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i class="fas fa-mars"></i>
+                    <span>Men</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#">T-Shirts</a>
+                    <a href="#">Hoodies</a>
+                    <a href="#">Pants</a>
+                    <a href="#">Jackets</a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i class="fas fa-venus"></i>
+                    <span>Women</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#">Tops</a>
+                    <a href="#">Dresses</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Outerwear</a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i class="fas fa-ring"></i>
+                    <span>Accessories</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="sidebar-links">
+                    <a href="#">Hats</a>
+                    <a href="#">Bags</a>
+                    <a href="#">Jewelry</a>
+                    <a href="#">Watches</a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+            <p>&copy; 2025 BrandX. All rights reserved.</p>
+        </div>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <!-- Main content with improved structure -->
+    <main class="main-content">
+        <!-- Hero carousel with video background option -->
+        <section class="hero-carousel">
+            <div class="carousel-slide active" style="background-image: url(images/img4.png);">
+                <div class="slide-content">
+                    <span class="slide-badge">New Collection</span>
+                    <h1 class="slide-title">Urban Essentials</h1>
+                    <p class="slide-subtitle">Elevate your streetwear game with our premium collection</p>
+                    <a href="#" class="shop-button">
+                        <span>Shop Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" style="background-image: url(images/img5.png);">
+                <div class="slide-content">
+                    <span class="slide-badge">Summer Sale</span>
+                    <h1 class="slide-title">Summer Vibes</h1>
+                    <p class="slide-subtitle">Up to 40% off selected items</p>
+                    <a href="#" class="shop-button">
+                        <span>Explore Sale</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" style="background-image: url(images/img6.png);">
+                <div class="slide-content">
+                    <span class="slide-badge">Limited Edition</span>
+                    <h1 class="slide-title">Exclusive Drops</h1>
+                    <p class="slide-subtitle">Unique pieces available for a limited time</p>
+                    <a href="#" class="shop-button">
+                        <span>View Drops</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots"></div>
+                <button class="carousel-next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+        
+        <!-- Brand showcase with hover effects -->
+        <section class="brand-showcase">
+            <div class="showcase-item">
+                <div class="showcase-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Free Shipping</h3>
+                <p>On all orders over $100</p>
+            </div>
+            <div class="showcase-item">
+                <div class="showcase-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3>Easy Returns</h3>
+                <p>30-day return policy</p>
+            </div>
+            <div class="showcase-item">
+                <div class="showcase-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Secure Payment</h3>
+                <p>100% secure checkout</p>
+            </div>
+            <div class="showcase-item">
+                <div class="showcase-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Dedicated customer service</p>
+            </div>
+        </section>
+        
+        <!-- Featured products with modern card design -->
+        <section class="featured-products">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-id="1" data-category="tshirts">
+                    <div class="product-badge">New</div>
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573" alt="Premium Logo T-Shirt" class="product-image">
+                        <div class="product-actions">
+                            <button class="quick-view" onclick="openQuickView(1)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-product-id="1" onclick="toggleWishlist(1)">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Premium Logo T-Shirt</h3>
+                        <div class="product-meta">
+                            <div class="product-colors">
+                                <span class="color-option" style="background-color: #000;"></span>
+                                <span class="color-option" style="background-color: #7D0A0A;"></span>
+                                <span class="color-option" style="background-color: #1a1a2e;"></span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$39.99</span>
+                            <span class="original-price">$49.99</span>
+                        </div>
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" onclick="addToCart(1)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <a href="product.html?id=1" class="view-product">
+                                <i class="fas fa-arrow-right"></i>
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-id="2" data-category="hoodies">
+                    <div class="product-badge">Sale</div>
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7" alt="Urban Style Hoodie" class="product-image">
+                        <div class="product-actions">
+                            <button class="quick-view" onclick="openQuickView(2)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-product-id="2">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Urban Style Hoodie</h3>
+                        <div class="product-meta">
+                            <div class="product-colors">
+                                <span class="color-option" style="background-color: #333;"></span>
+                                <span class="color-option" style="background-color: #7D0A0A;"></span>
+                                <span class="color-option" style="background-color: #1a1a2e;"></span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$59.99</span>
+                            <span class="original-price">$79.99</span>
+                        </div>
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" onclick="addToCart(2)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <a href="product.html?id=2" class="view-product">
+                                <i class="fas fa-arrow-right"></i>
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-id="3" data-category="jackets">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea" alt="Classic Denim Jacket" class="product-image">
+                        <div class="product-actions">
+                            <button class="quick-view" onclick="openQuickView(3)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-product-id="3">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Classic Denim Jacket</h3>
+                        <div class="product-meta">
+                            <div class="product-colors">
+                                <span class="color-option" style="background-color: #1a1a2e;"></span>
+                                <span class="color-option" style="background-color: #7D0A0A;"></span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$109.99</span>
+                        </div>
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" onclick="addToCart(3)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <a href="product.html?id=3" class="view-product">
+                                <i class="fas fa-arrow-right"></i>
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-id="4" data-category="tshirts">
+                    <div class="product-badge">New</div>
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a" alt="Graphic Print T-Shirt" class="product-image">
+                        <div class="product-actions">
+                            <button class="quick-view" onclick="openQuickView(4)">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="add-to-wishlist" data-product-id="4">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Graphic Print T-Shirt</h3>
+                        <div class="product-meta">
+                            <div class="product-colors">
+                                <span class="color-option" style="background-color: #fff;"></span>
+                                <span class="color-option" style="background-color: #000;"></span>
+                                <span class="color-option" style="background-color: #7D0A0A;"></span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$34.99</span>
+                            <span class="original-price">$44.99</span>
+                        </div>
+                        <div class="product-actions-bottom">
+                            <button class="add-to-cart" onclick="addToCart(4)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <a href="product.html?id=4" class="view-product">
+                                <i class="fas fa-arrow-right"></i>
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Collections with parallax effect -->
+        <section class="collections-section">
+            <div class="section-header">
+                <h2 class="section-title">Our Collections</h2>
+                <p class="section-subtitle">Curated styles for every occasion</p>
+            </div>
+            
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="collection-overlay">
+                            <h3>Streetwear Essentials</h3>
+                            <p>Urban styles for everyday wear</p>
+                            <a href="#" class="collection-button">Shop Collection</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                        <div class="collection-overlay">
+                            <h3>Summer Vibes</h3>
+                            <p>Lightweight fabrics for warm days</p>
+                            <a href="#" class="collection-button">Shop Collection</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-image" style="background-image: url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80');">
+                        <div class="collection-overlay">
+                            <h3>Limited Edition</h3>
+                            <p>Exclusive designs for a limited time</p>
+                            <a href="#" class="collection-button">Shop Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Instagram feed integration -->
+        <section class="instagram-feed">
+            <div class="section-header">
+                <h2 class="section-title">Follow Us @BrandX</h2>
+                <p class="section-subtitle">Tag us for a chance to be featured</p>
+            </div>
+            
+            <div class="instagram-grid">
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Instagram post">
+                    <div class="post-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1072&q=80" alt="Instagram post">
+                    <div class="post-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1016&q=80" alt="Instagram post">
+                    <div class="post-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80" alt="Instagram post">
+                    <div class="post-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Instagram post">
+                    <div class="post-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter with modern design -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Join Our Community</h2>
+                    <p>Subscribe to our newsletter and get 10% off your first order</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="newsletter-consent" required>
+                            <label for="newsletter-consent">I agree to receive marketing emails from BrandX</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modern footer with improved layout -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3 class="footer-logo">BrandX</h3>
+                    <p>Premium urban fashion for the modern individual. Quality materials, sustainable practices, and timeless designs.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa fa-2x"></i>
+                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                        <i class="fab fa-cc-paypal fa-2x"></i>
+                        <i class="fab fa-cc-apple-pay fa-2x"></i>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#" onclick="alert('Shipping Information: We offer worldwide shipping. Standard delivery takes 3-5 business days.')">Shipping Info</a></li>
+                            <li><a href="#" onclick="alert('Returns Policy: Easy 30-day returns on all unused items.')">Returns Policy</a></li>
+                            <li><a href="#" onclick="alert('Size Guide: Please refer to individual product pages for detailed size information.')">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect With Us</h4>
+                        <ul>
+                            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, New York, NY 10001</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@brandx.com">contact@brandx.com</a></p>
+                    </address>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 BrandX. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#" onclick="alert('Privacy Policy: We respect your privacy and protect your personal information.')">Privacy Policy</a>
+                        <a href="#" onclick="alert('Terms of Service: By using our website, you agree to our terms of service.')">Terms of Service</a>
+                        <a href="#" onclick="alert('Cookie Policy: We use cookies to enhance your browsing experience.')">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Quick view modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <!-- Product details will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mini cart drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close">&times;</button>
+        </div>
+        <div class="cart-body">
+            <!-- Cart items will be loaded here -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="#" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-totals">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <p class="cart-shipping">Shipping & taxes calculated at checkout</p>
+            </div>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Back to top button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
